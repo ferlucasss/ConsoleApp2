@@ -1,10 +1,27 @@
-﻿int[] lista = new int[3];
-lista[0] = 1;
-lista[1] = 2;
-lista[2] = 3;
+﻿Console.WriteLine("ingrese nombre");
+string Nombre = Console.ReadLine();
+Console.WriteLine("ingrese mail");
+string Mail = Console.ReadLine();
+Console.WriteLine("ingrese cupon");
+string cupon = Console.ReadLine();
 
+double precio = 200;
+bool descuento;
 
-foreach (int i in lista)
+if(cupon == "si")
 {
-    Console.WriteLine(i);
+    descuento = true;
+}
+else
+{
+    descuento = false;
+}
+
+if (descuento)
+{
+    Console.WriteLine(precio * 0.9);
+}
+else
+{
+    Console.WriteLine(precio);
 }
